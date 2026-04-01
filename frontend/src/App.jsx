@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 
-const API = import.meta.env.VITE_API_URL
+const API = `${import.meta.env.VITE_API_URL}/api`
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 const STATUS_META = {
