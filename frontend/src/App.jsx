@@ -6,7 +6,6 @@ const API = import.meta.env.VITE_API_URL
 const STATUS_META = {
   Applied:   { color: '#60a5fa', bg: 'rgba(96,165,250,0.12)' },
   Interview: { color: '#fbbf24', bg: 'rgba(251,191,36,0.12)' },
-  Offer:     { color: '#4ade80', bg: 'rgba(74,222,128,0.12)' },
   Rejected:  { color: '#f87171', bg: 'rgba(248,113,113,0.12)' },
 }
 const WORK_META = {
@@ -116,7 +115,7 @@ function Modal({ app, userId, onClose, onSave }) {
 function Dashboard({ user, apps, onSync, syncing }) {
   const total = apps.length
   const byStatus = s => apps.filter(a => a.status === s).length
-  const rate = total > 0 ? Math.round((byStatus('Interview') + byStatus('Offer')) / total * 100) : 0
+  const rate = total > 0 ? Math.round((byStatus('Interview')) / total * 100) : 0
 
   const stats = [
     { label:'Total', value: total },
