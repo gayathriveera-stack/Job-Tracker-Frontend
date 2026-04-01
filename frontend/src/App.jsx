@@ -88,7 +88,7 @@ function Modal({ app, userId, onClose, onSave }) {
           <Field label="Applied date"><input type="date" value={form.applied_date} onChange={e => set('applied_date', e.target.value)} /></Field>
           <Field label="Status">
             <select value={form.status} onChange={e => set('status', e.target.value)}>
-              {['Applied','Interview','Offer','Rejected'].map(s => <option key={s}>{s}</option>)}
+              {['Applied','Interview','Rejected'].map(s => <option key={s}>{s}</option>)}
             </select>
           </Field>
           <Field label="Work mode">
@@ -121,7 +121,6 @@ function Dashboard({ user, apps, onSync, syncing }) {
   const stats = [
     { label:'Total', value: total },
     { label:'Interviews', value: byStatus('Interview'), color:'var(--amber)' },
-    { label:'Offers', value: byStatus('Offer'), color:'var(--green)' },
     { label:'Response rate', value: total > 0 ? `${rate}%` : '—', color: rate >= 20 ? 'var(--green)' : 'var(--text)' },
   ]
 
