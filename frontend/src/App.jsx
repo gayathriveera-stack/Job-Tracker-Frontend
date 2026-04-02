@@ -262,7 +262,7 @@ export default function App() {
           </thead>
           <tbody>
             {filtered.length === 0 ? (
-              <tr><td colSpan={9} style={{ textAlign:'center', padding:40, color:'var(--muted)' }}>
+              <tr><td colSpan={8} style={{ textAlign:'center', padding:40, color:'var(--muted)' }}>
                 {apps.length === 0 ? 'No applications yet — add one or sync Gmail.' : 'No results match your filter.'}
               </td></tr>
             ) : filtered.map(a => (
