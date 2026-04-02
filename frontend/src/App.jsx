@@ -50,7 +50,7 @@ function Login() {
 
 // ── Modal ─────────────────────────────────────────────────────────────────────
 function Modal({ app, userId, onClose, onSave }) {
-  const blank = { company:'', role:'', applied_date: new Date().toISOString().slice(0,10), status:'Applied', work_mode:'Remote', salary:'', contact:'', job_url:'', notes:'' }
+  const blank = { company:'', description:'', applied_date: new Date().toISOString().slice(0,10), status:'Applied', work_mode:'Remote', salary:'', contact:'', job_url:'', notes:'' }
   const [form, setForm] = useState(app || blank)
   const set = (k, v) => setForm(f => ({ ...f, [k]: v }))
 
