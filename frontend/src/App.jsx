@@ -273,7 +273,7 @@ export default function App() {
                 <td style={{ padding:'10px 14px' }}>{a.company}</td>
                 <td style={{ padding:'10px 14px', color:'var(--muted)', whiteSpace:'nowrap' }}>{fmt(a.applied_date)}</td>
                 <td style={{ padding:'10px 14px' }}><Badge label={a.status} meta={STATUS_META[a.status]} /></td>
-                
+                <td style={{ padding:'10px 14px' }}><Badge label={a.work_mode} meta={WORK_META[a.work_mode] || WORK_META['On-site']} /> </td>
                 <td style={{ padding:'10px 14px', color:'var(--muted)', whiteSpace:'nowrap' }}>{a.salary || '—'}</td>
                 <td style={{ padding:'10px 14px', color:'var(--muted)' }}>{a.contact || '—'}</td>
                 <td style={{ padding:'10px 14px' }}>{a.job_url ? <a href={a.job_url} target="_blank" rel="noreferrer" style={{ color:'var(--accent)', fontSize:12 }}>View ↗</a> : '—'}</td>
