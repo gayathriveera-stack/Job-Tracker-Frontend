@@ -50,7 +50,7 @@ function Login() {
 
 // ── Modal ─────────────────────────────────────────────────────────────────────
 function Modal({ app, userId, onClose, onSave }) {
-  const blank = { company:'', description:'', applied_date: new Date().toISOString().slice(0,10), status:'Applied', work_mode:'Remote', salary:'', contact:'', job_url:'', notes:'' }
+  const blank = { company:'', role:'', applied_date: new Date().toISOString().slice(0,10), status:'Applied', work_mode:'Remote', salary:'', contact:'', job_url:'', notes:'' }
   const [form, setForm] = useState(app || blank)
   const set = (k, v) => setForm(f => ({ ...f, [k]: v }))
 
@@ -83,7 +83,7 @@ function Modal({ app, userId, onClose, onSave }) {
           <button onClick={onClose} style={{ background:'none', border:'none', color:'var(--muted)', fontSize:20 }}>×</button>
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:14 }}>
-          <Field label="Role *"><input value={form.role} onChange={e => set('role', e.target.value)} placeholder="e.g. Frontend Engineer" /></Field>
+          <Field label="Description *"><input value={form.role} onChange={e => set('role', e.target.value)} placeholder="e.g. Frontend Engineer" /></Field>
           <Field label="Company *"><input value={form.company} onChange={e => set('company', e.target.value)} placeholder="e.g. Google" /></Field>
           <Field label="Applied date"><input type="date" value={form.applied_date} onChange={e => set('applied_date', e.target.value)} /></Field>
           <Field label="Status">
